@@ -1,12 +1,56 @@
 <html>
     <head>
         <style>
-            
+            @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
+
+            :root {
+                --main-color: #FFFDFA;
+                --secondary-color: #342F67;
+                --accent-color: #6F6C91;
+            }
+
+            body {
+                display: flex;
+                flex: 1 auto;
+
+                font-family: Geologica;
+                font-size: 24px;
+
+                background-color: var(--main-color);
+                margin: 0px;
+            }
+
+            img {
+                align-self: center;
+                border-radius: 50%;
+                border: 7px solid var(--main-color);
+                width: 200px;
+                height: auto;
+                aspect-ratio: 1;
+            }
+
+            .left-block {
+                background-color: var(--secondary-color);
+                display: flex;
+                flex: auto;
+                flex-direction: column;
+                
+                width: 300px;
+                min-width: 300px;
+                height: auto;
+                padding: 20px;
+            }
+
+            .main-block {
+                display: flex;
+                flex: auto;
+                flex-direction: column;
+            }
         </style>
     </head>
     <body>
         <!-- ліва частина -->
-        <section>
+        <section class="left-block">
             <!-- фото -->
             <img src="./cv.jpg" />
 
