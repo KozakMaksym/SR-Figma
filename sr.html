@@ -3,11 +3,14 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 
+            /* змінні кольорів */
             :root {
                 --main-color: #FFFDFA;
                 --secondary-color: #342F67;
                 --accent-color: #6F6C91;
             }
+
+            /* основна структура */
 
             body {
                 display: flex;
@@ -18,6 +21,10 @@
 
                 background-color: var(--main-color);
                 margin: 0px;
+                height: 100%;
+
+                align-items: stretch;
+                min-height: fit-content;
             }
 
             img {
@@ -34,17 +41,51 @@
                 display: flex;
                 flex: auto;
                 flex-direction: column;
+
+                color: var(--main-color);
                 
                 width: 300px;
                 min-width: 300px;
-                height: auto;
-                padding: 20px;
+                min-height: fit-content;
+                padding: 40px;
+
+                justify-self: stretch;
+                flex-grow: 1;
+
+                gap: 60px;
             }
 
             .main-block {
                 display: flex;
                 flex: auto;
                 flex-direction: column;
+                min-height: fit-content;
+            }
+
+            /* налаштування тексту */
+
+            h3 {
+                font-size: 36px;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            h4 {
+                font-size: 24px;
+                font-weight: 400;
+                margin: 0;
+
+                padding-top: 31px;
+            }
+
+            .small {
+                font-size: 16px;
+                margin: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding-top: 20px;
             }
         </style>
     </head>
@@ -55,14 +96,16 @@
             <img src="./cv.jpg" />
 
             <!-- блок з особистими даними -->
-            <h2>Особисті дані</h2>
             <div>
-                <h3>Адреса</h3>
-                <p>м. Київ, вул. Хрещатик 1</p>
-            </div>
-            <div>
-                <h3>Телефон</h3>
-                <p>+38 (099) 584-49-77</p>
+                <h3>Особисті дані</h2>
+                <div>
+                    <h4>Адреса</h3>
+                    <p class="small">м. Київ, вул. Хрещатик 1</p>
+                </div>
+                <div>
+                    <h4>Телефон</h3>
+                    <p class="small">+38 (099) 584-49-77</p>
+                </div>
             </div>
             <div>
                 <h3>Технічні скіли</h3>
@@ -85,7 +128,7 @@
         </section>
 
         <!-- основна частина -->
-        <div>
+        <div class="main-block">
             <div>
                 <p>Game Developer</p>
 
